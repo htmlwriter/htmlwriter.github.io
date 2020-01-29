@@ -1,0 +1,29 @@
+body {
+  background-color: #c7c7c7;
+  padding: 20px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #2145fc;
+  top: 0;
+  width: 100%;
+  position: absolute;
+}
+.option {
+  float: left;
+}
+.option a {
+  display: block;
+  color: #ffffff;
+  padding: 22px 25px;
+  text-decoration: none;
+}
+.option a:hover {
+  background-color: 2168fc;
+}
+.active {
+  background-color: 2168fc;
+}
+
