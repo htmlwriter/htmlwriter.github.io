@@ -12,7 +12,7 @@ body {
   position: absolute;
 }
 .option {
-  background-color: 2168fc;
+  background-color: 2145fc;
   float: left;
 }
 .option a {
@@ -27,4 +27,18 @@ body {
 .active {
   background-color: 2168fc;
 }
-
+.partxt {
+  font-size:17px;
+  color: #ffffff;
+  padding:35px;
+  line-height:1.8;
+  letter-spacing: 3px;
+}
+.parallax {
+  height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
