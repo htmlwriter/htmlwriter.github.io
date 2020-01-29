@@ -43,3 +43,10 @@ body {
   background-size: cover;
   opacity: 0.9;
 }
+.leftdiv {
+float: left;
+padding : 1%;
+color: #00008d;
+background-color : #ffffff;
+width : 75%;
+}
