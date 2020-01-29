@@ -1,6 +1,7 @@
 body {
   background-color: #efefef;
   padding: 20px;
+  font-family: 'Lato', sans-serif;
 }
 .nav {
   list-style-type: none;
