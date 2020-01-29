@@ -12,6 +12,7 @@ body {
   position: absolute;
 }
 .option {
+  background-color: 2168fc;
   float: left;
 }
 .option a {
