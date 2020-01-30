@@ -20,3 +20,22 @@ Welcome to the source code generator for HTML writer! There are a variety of fea
 <br><br>
 (Note: Colors can be entered either as text, if it is a standard color, or as a hexadecimal code.)
 <br><br>
+<hr noshade>
+<br><br>
+<h2>Text</h2>
+<form name = "textform">
+<p>Text Type: 
+<input list="texttypes" name="texttype" value = "normal text">
+<datalist id="texttypes">
+  <option value="heading 1">
+  <option value="heading 2">
+  <option value="heading 3">
+  <option value="heading 4">
+  <option value="heading 5">
+  <option value="heading 6">
+  <option value="normal text">
+</datalist>
+<br>
+Color: <input type = "text" name = "textcolor" value = "#000000"><br>
+Text: <input type = "text" size = "80" name = "textval" value = "Enter text here"><br>
+</form>
