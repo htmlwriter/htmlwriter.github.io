@@ -22,10 +22,10 @@ body {
   text-decoration: none;
 }
 .option a:hover {
-  background-color: 2168fc;
+  background-color: #0d59ff;
 }
 .active {
-  background-color: 2168fc;
+  background-color: #0d59ff;
 }
 .partxt {
   font-size:17px;
