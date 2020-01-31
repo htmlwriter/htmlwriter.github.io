@@ -25,7 +25,7 @@ function textcheck() {
   }
   txtcolor = document.textform.textcolor.value;
   text = document.textform.textval.value;
-  code = "<" + txttype + ">" + text + "</" + txttype + ">"
+  code = String("<" + txttype + ">" + text + "</" + txttype + ">")
   document.write(code)
 }
 </script>
