@@ -5,17 +5,27 @@
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <title>HTMLwriter</title>
 <script>
+var code = "";
 function textcheck() {
 var text = "";
 var txtcolor = "";
 var txttype = "";
 if (document.textform.texttype.value == "heading 1") {
   txttype = "h1";
-  document.getElementById("out").innerHTML = txttype;
+}elif (document.textform.texttype.value == "heading 2") {
+  txttype = "h2";
+}elif (document.textform.texttype.value == "heading 3") {
+  txttype = "h3";
+}elif (document.textform.texttype.value == "heading 4") {
+  txttype = "h4";
+}elif (document.textform.texttype.value == "heading 5") {
+  txttype = "h5";
+}elif (document.textform.texttype.value == "heading 6") {
+  txttype = "h6";
 }
-}
-function done() {
-  document.getElementById("done").innerHTML = txttype;
+txtcolor = document.textform.textcolor.value;
+text = document.textform.textval.value;
+document.getElementById("out").innerHTML = "<"+txttype+">"+text+"</"+txttype+">";
 }
 </script>
 </head>
