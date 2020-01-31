@@ -14,6 +14,8 @@ if (document.textform.texttype.value = "heading 1") {
   document.getElementById("out").innerHTML = txttype;
 }
 }
+function done() {
+  document.getElementById("done").innerHTML = txttype;
 </script>
 </head>
 <body>
@@ -51,4 +53,6 @@ Color: <input type = "text" name = "textcolor" value = "#000000"><br><br>
 Text: <input type = "text" size = "80" name = "textval" value = "Enter text here"><br><br>
 <button onclick = "textcheck()">Add Text</button>
 </form>
-<p id = "out"></p>
+<p id = "out"></p><br>
+  <button onclick = "done()">done</button>
+<p id = "done"></p>
