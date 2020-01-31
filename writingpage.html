@@ -4,6 +4,17 @@
 <link rel = "shortcut icon" href = "images/op2.png">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <title>HTMLwriter</title>
+<script>
+function textcheck() {
+var text = "";
+var txtcolor = "";
+var txttype = "";
+if (document.textform.texttypes.value == "heading 1") {
+  txttype = "h1";
+  document.write(txttype)
+}
+}
+</script>
 </head>
 <body>
 <ul class = "nav">
@@ -38,5 +49,5 @@ Welcome to the source code generator for HTML writer! There are a variety of fea
 <br><br>
 Color: <input type = "text" name = "textcolor" value = "#000000"><br><br>
 Text: <input type = "text" size = "80" name = "textval" value = "Enter text here"><br><br>
-<button onclick = "">Add Text</button>
+<button onclick = "textcheck()">Add Text</button>
 </form>
