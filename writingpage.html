@@ -7,25 +7,25 @@
 <script>
 var code = "";
 function textcheck() {
-var text = "";
-var txtcolor = "";
-var txttype = "";
-if (document.textform.texttype.value == "heading 1") {
-  txttype = "h1";
-}elif (document.textform.texttype.value == "heading 2") {
-  txttype = "h2";
-}elif (document.textform.texttype.value == "heading 3") {
-  txttype = "h3";
-}elif (document.textform.texttype.value == "heading 4") {
-  txttype = "h4";
-}elif (document.textform.texttype.value == "heading 5") {
-  txttype = "h5";
-}elif (document.textform.texttype.value == "heading 6") {
-  txttype = "h6";
-}
-txtcolor = document.textform.textcolor.value;
-text = document.textform.textval.value;
-document.getElementById("out").innerHTML = "hello!";
+  var text = "";
+  var txtcolor = "";
+  var txttype = "";
+  if (document.textform.texttype.value == "heading 1") {
+    txttype = "h1";
+  }else if (document.textform.texttype.value == "heading 2") {
+    txttype = "h2";
+  }else if (document.textform.texttype.value == "heading 3") {
+    txttype = "h3";
+  }else if (document.textform.texttype.value == "heading 4") {
+    txttype = "h4";
+  }else if (document.textform.texttype.value == "heading 5") {
+    txttype = "h5";
+  }else if (document.textform.texttype.value == "heading 6") {
+    txttype = "h6";
+  }
+  txtcolor = document.textform.textcolor.value;
+  text = document.textform.textval.value;
+  document.getElementById("out").innerHTML = "hello!";
 }
 </script>
 </head>
