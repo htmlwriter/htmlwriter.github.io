@@ -7,10 +7,14 @@
 <script>
 var code = "<plaintext>";
 function generaldetails() {
-  var title = document.generaldetails.title.value;
-  var font = document.generaldetails.font.value;
-  var fontfamily = document.generaldetails.fontfamily.value;
-  var colororpath = document.generaldetails.colorpath.value;
+  var title = "";
+  var font = "";
+  var fontfamily = "";
+  var colororpath = "";
+  title = document.generaldetails.title.value;
+  font = document.generaldetails.font.value;
+  fontfamily = document.generaldetails.fontfamily.value;
+  colororpath = document.generaldetails.colorpath.value;
   if (document.getElementById("img").checked) {
     code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body background = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
   } else if (document.getElementById("color").checked) {
