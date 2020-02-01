@@ -16,7 +16,7 @@ function generaldetails() {
   } else if (document.getElementById("color").checked) {
     code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body bgcolor = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
   }
-  document.getElementById("out").innerHTML = code;
+  document.getElementById("out1").innerHTML = code;
 }
 function textcheck() {
   var text = "";
@@ -76,6 +76,7 @@ Image or solid color as background?
   
 Color/Image Path: <input type = "text" name = "colorpath" value = "" placeholder = "Enter color/path"><br>
 <button onclick = "generaldetails(); return false">Save Details</button>
+<p id = "out1"></p>
 </form><br><hr noshade><br></p>
 </p>
 <p id = "main">
