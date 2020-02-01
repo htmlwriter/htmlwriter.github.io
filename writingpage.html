@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <title>HTMLwriter</title>
 <script>
-var code = "";
+var code = "<plaintext>";
 function textcheck() {
   var text = "";
   var txtcolor = "";
@@ -27,7 +27,7 @@ function textcheck() {
   }
   txtcolor = document.textform.textcolor.value;
   text = document.textform.textval.value;
-  code += "<plaintext><" + txttype + " style = \"color:" + txtcolor + ";\">" + text + "</" + txttype + ">\n";
+  code += "<" + txttype + " style = \"color:" + txtcolor + ";\">" + text + "</" + txttype + ">\n";
   document.getElementById("out").innerHTML = code;
 }
 </script>
