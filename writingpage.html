@@ -6,6 +6,17 @@
 <title>HTMLwriter</title>
 <script>
 var code = "<plaintext>";
+function generaldetails() {
+  var title = document.generaldetails.title.value;
+  var font = document.generaldetails.font.value;
+  var fontfamily = document.generaldetails.fontfamily.value;
+  var colororpath = document.generaldetails.colorpath.value;
+  if (document.getElementById("img").checked) {
+    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body background = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+  } else if (document.getElementById("color").checked) {
+    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body bgcolor = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+  }
+}
 function textcheck() {
   var text = "";
   var txtcolor = "";
@@ -48,6 +59,7 @@ Welcome to the source code generator for HTML writer! There are a variety of fea
 (Note: Colors can be entered either as text, if it is a standard color, or as a hexadecimal code.)
 <br>
 <hr noshade>
+<p id = "gd">
 <br>
 <h2>General Details</h2>
 <br>
@@ -61,8 +73,11 @@ Image or solid color as background?
 <input type="radio" name="bg" value="2" id="color">Solid color<br>
 </fieldset><br><br>
   
-Color/Image Path: <input type = "text" name = "color/path" value = "" placeholder = "Enter color/path"><br>
-</form><br><hr noshade><br>
+Color/Image Path: <input type = "text" name = "colorpath" value = "" placeholder = "Enter color/path"><br>
+<button onclick = "generaldetails()">Save Details</button>
+</form><br><hr noshade><br></p>
+</p>
+<p id = "main">
 <h2>Text</h2>
 <form name = "textform">
 <p>Text Type: 
@@ -82,3 +97,4 @@ Text: <input type = "text" size = "80" name = "textval" value = "Enter text here
 <button onclick = "textcheck(); return false">Add Text</button>
 </form>
 <p id = "out"></p><br>
+</p>
