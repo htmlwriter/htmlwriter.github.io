@@ -44,6 +44,7 @@ body {
 }
 .leftdiv {
 float: left;
+word-wrap: break-word;
 padding : 1%;
 color: #00008d;
 background-color : #ffffff;
