@@ -27,7 +27,7 @@ function textcheck() {
   }
   txtcolor = document.textform.textcolor.value;
   text = document.textform.textval.value;
-  code += "<plaintext><" + txttype + " style = \"color:" + txtcolor + ";\">" + text + "</" + txttype + ">";
+  code += "<plaintext><" + txttype + " style = \"color:" + txtcolor + ";\">" + text + "</" + txttype + ">\n";
   document.getElementById("out").innerHTML = code;
 }
 </script>
