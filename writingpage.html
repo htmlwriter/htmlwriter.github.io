@@ -22,6 +22,8 @@ function textcheck() {
     txttype = "h5";
   }else if (document.textform.texttype.value == "heading 6") {
     txttype = "h6";
+  }else if (document.textform.texttype.value == "normal text") {
+    txttype = "p";
   }
   txtcolor = document.textform.textcolor.value;
   text = document.textform.textval.value;
@@ -47,6 +49,12 @@ Welcome to the source code generator for HTML writer! There are a variety of fea
 <br>
 <hr noshade>
 <br>
+<h2>General Details</h2>
+<br>
+<form name = "generaldetails">
+<p>Title of Page: <input type = "text" name = "title" value = "" placeholder = "Enter title"><br>
+Font of Webpage: <input type = "text" name = "font" value = "" placeholder = "Enter font"><input type = "text" name = "fontfamily" value = "" placeholder = "Enter font family"><br>
+</form><br><hr noshade><br>
 <h2>Text</h2>
 <form name = "textform">
 <p>Text Type: 
