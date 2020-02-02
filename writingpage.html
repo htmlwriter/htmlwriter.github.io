@@ -15,11 +15,13 @@ function generaldetails() {
   font = document.generaldetails.font.value;
   fontfamily = document.generaldetails.fontfamily.value;
   colororpath = document.generaldetails.colorpath.value;
+  var command = "";
   if (document.getElementById("img").checked) {
-    code += "<html><head><title>" + title + "</title></head><body background = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+    command = "background"
   } else if (document.getElementById("color").checked) {
-    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body bgcolor = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+    command = "bgcolor"
   }
+  code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body "+ command + " = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
   document.write(code);
 }
 function textcheck() {
