@@ -15,12 +15,11 @@ function generaldetails() {
   font = document.generaldetails.font.value;
   fontfamily = document.generaldetails.fontfamily.value;
   colororpath = document.generaldetails.colorpath.value;
-  var command = "";
-  if (document.generaldetails.imgcolor.value == "img") {
-    command = "background";
-  } else if (document.generaldetails.imgcolor.value == "color") {
-    command = "bgcolor";
-  code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body "+ command + " = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+  if (document.getElementById("img").checked) {
+    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body background = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+  } else if (document.getElementById("color").checked) {
+    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body bgcolor = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
+  }
   document.write(code);
 }
 function textcheck() {
@@ -73,11 +72,12 @@ Welcome to the source code generator for HTML writer! There are a variety of fea
 <p>Title of Page: <input type = "text" name = "title" value = "" placeholder = "Enter title"><br><br>
 Font of Webpage: <input type = "text" name = "font" value = "" placeholder = "Enter font"><input type = "text" name = "fontfamily" value = "" placeholder = "Enter font family"><br><br>
 Image or solid color as background?
-<input list = "imgorcolor" name = "imgcolor" value = "">
-<datalist id = "imgorcolor">
-  <option value="img">
-  <option value="color"><br><br>
-</datalist>
+
+<fieldset>
+<input type="radio" name="bg" value="1" id="img">Image<br>
+<input type="radio" name="bg" value="2" id="color">Solid color<br>
+</fieldset><br><br>
+  
 Color/Image Path: <input type = "text" name = "colorpath" value = "" placeholder = "Enter color/path"><br>
 <button onclick = "generaldetails(); return false">Save Details</button>
 <p id = "out1"></p>
