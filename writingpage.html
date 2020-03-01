@@ -4,50 +4,6 @@
 <link rel = "shortcut icon" href = "images/op2.png">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <title>HTMLwriter</title>
-<script>
-var code = "<plaintext>";
-function generaldetails() {
-  var title = "";
-  var font = "";
-  var fontfamily = "";
-  var colororpath = "";
-  title = document.generaldetails.title.value;
-  font = document.generaldetails.font.value;
-  fontfamily = document.generaldetails.fontfamily.value;
-  colororpath = document.generaldetails.colorpath.value;
-  if (document.getElementById("img").checked) {
-    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body background = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
-  } else if (document.getElementById("color").checked) {
-    code += "<html>\n<head>\n<title>" + title + "</title>\n</head>\n<body bgcolor = \"" + colororpath + "\" leftmargin = \"50\" rightmargin = \"50\">\n";
-  }
-  document.write(code);
-}
-function textcheck() {
-  var text = "";
-  var txtcolor = "";
-  var txttype = "";
-  if (document.textform.texttype.value == "heading 1") {
-    txttype = "h1";
-  }else if (document.textform.texttype.value == "heading 2") {
-    txttype = "h2";
-  }else if (document.textform.texttype.value == "heading 3") {
-    txttype = "h3";
-  }else if (document.textform.texttype.value == "heading 4") {
-    txttype = "h4";
-  }else if (document.textform.texttype.value == "heading 5") {
-    txttype = "h5";
-  }else if (document.textform.texttype.value == "heading 6") {
-    txttype = "h6";
-  }else if (document.textform.texttype.value == "normal text") {
-    txttype = "p";
-  }
-  txtcolor = document.textform.textcolor.value;
-  text = document.textform.textval.value;
-  code += "<" + txttype + " style = \"color:" + txtcolor + ";\">" + text + "</" + txttype + ">\n";
-  document.getElementById("out").innerHTML = code;
-}
-</script>
-</head>
 <body>
 <ul class = "nav">
   <li class = "option"><img src = "images/op2.png" height = "65" width = "65">
@@ -59,48 +15,8 @@ function textcheck() {
 <h1>Create Source Code</h1>
 <div class = "leftdiv">
 <p>
-Welcome to the source code generator for HTML writer! There are a variety of features that you can choose from to build your webpage. Simply scroll to the appropriate place in this page, fill in all of the values and click on "Add to source code." You can do this as many times as you want for whatever features required. When you are finished, click "Done" and your source code will spill out. We hope you enjoy!
+Welcome to the source code generator for HTML writer, written in Python. There are a variety of components you can add to your page.
 <br><br>
 (Note: Colors can be entered either as text, if it is a standard color, or as a hexadecimal code.)
 <br>
 <hr noshade>
-<p id = "gd">
-<br>
-<h2>General Details</h2>
-<br>
-<form name = "generaldetails">
-<p>Title of Page: <input type = "text" name = "title" value = "" placeholder = "Enter title"><br><br>
-Font of Webpage: <input type = "text" name = "font" value = "" placeholder = "Enter font"><input type = "text" name = "fontfamily" value = "" placeholder = "Enter font family"><br><br>
-Image or solid color as background?
-
-<fieldset>
-<input type="radio" name="bg" value="1" id="img">Image<br>
-<input type="radio" name="bg" value="2" id="color">Solid color<br>
-</fieldset><br><br>
-  
-Color/Image Path: <input type = "text" name = "colorpath" value = "" placeholder = "Enter color/path"><br>
-<button onclick = "generaldetails(); return false">Save Details</button>
-<p id = "out1"></p>
-</form><br><hr noshade><br></p>
-</p>
-<p id = "main">
-<h2>Text</h2>
-<form name = "textform">
-<p>Text Type: 
-<input list="texttypes" name="texttype" value = "">
-<datalist id="texttypes">
-  <option value="heading 1">
-  <option value="heading 2">
-  <option value="heading 3">
-  <option value="heading 4">
-  <option value="heading 5">
-  <option value="heading 6">
-  <option value="normal text">
-</datalist>
-<br><br>
-Color: <input type = "text" name = "textcolor" value = "#000000"><br><br>
-Text: <input type = "text" size = "80" name = "textval" value = "Enter text here"><br><br>
-<button onclick = "textcheck(); return false">Add Text</button>
-</form>
-<p id = "out"></p><br>
-</p>
