@@ -50,3 +50,12 @@ color: #00008d;
 background-color : #ffffff;
 width : 75%;
 }
+.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding:10px;
+  background-color:#6bb7a7;
+  text-align:center;
+  letter-spacing: 2px;
+}
