@@ -8,6 +8,8 @@ body {
   padding: 0;
   background-color: #2145fc;
   top: 0;
+  left: 0;
+  background-position:fixed;
   width: 100%;
   position: absolute;
 }
