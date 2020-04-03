@@ -54,6 +54,7 @@ width : 75%;
 .fixed {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   padding:10px;
   background-color:#6bb7a7;
