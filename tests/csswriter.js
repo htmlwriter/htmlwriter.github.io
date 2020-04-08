@@ -25,7 +25,7 @@ function generate() {
 if (document.bg.bgimage.value == "") {
 	bgimage = "";
 } else {
-bgimage = "background-image: url('" + document.bg.bgimage.value; + "');";
+bgimage = "background-image: url('" + document.bg.bgimage.value + "');";
 }
 if (document.p.pcolor.value == "") {
  pcolor = "";
