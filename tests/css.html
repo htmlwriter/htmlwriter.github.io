@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>CSS writer</title>
+<style type="text/css">
+div.body {
+background-color: #ededed;
+}
+div.script {
+background-color: white;
+border: 2px black;
+font-family: asfsfd, courier;
+}
+fieldset {
+background-color: #eeeeee;
+text-align: right;
+margin: 10px;
+font-family: 'Arial', serif;
+font-size: 20px;
+}
+input {
+font-family: 'courier';
+font-size: 18px;
+}
+button{
+background-color: black;
+color: whitesmoke;
+float: right;
+font-size: 17px;
+padding: 3px;
+font-family: arial, serif;
+}
+button:hover {
+background-color: whitesmoke;
+color: black;
+float: right;
+font-size: 15px;
+padding: 5px;
+font-family: courier, serif;
+}
+#correction {
+font-family: 'Gothic', courier;
+font-size: 16;
+color: red;
+float: right;
+}
+</style>
+</head>
+<body bgcolor="#f7f7f7">
+<fieldset>
+<legend>Body</legend>
+<form name="bg">
+<label>Choose the background colour of your webpage, as either a standard colour or a hexadecimal code: </label><input name="bgcolor" type="color" value="#ffffff"><br>
+<label>Choose the background image of your webpage (Optional, if chosen, give image link with http://): </label><input name="bgimage" ><br>
+<label>Choose the margins of your webpage (Given in order top, right, bottom and left.): </label><input name="bgmargintop" value="0"><input name="bgmarginright" value="0"><input name="bgmarginbottom" value="0"><input name="bgmarginleft" value="0"><br>   
+</form>
+</fieldset>
+<fieldset>
+<legend>Font</legend>
+<form name="fnt">
+<label>Choose the font colour of your webpage: </label><input name="fontcolor" type="color"><br>
+<label>Choose the font type of your webpage: (default: serif): </label><input name="fontface" ><br>
+<label>Choose the backup font of your webpage : </label><input name="fontfamily" value="serif"><br>
+<label>Choose the font size of your webpage: </label><input name="fontsize" ><br>
+<label>Choose the font alignment of your webpage(Right, left or center): </label><input name="fontalign" ><br>
+</form>
+</fieldset>
+<fieldset>
+<legend>Paragraph (Optional, if ignored will use font settings as default.)</legend>
+<form name="p">
+<label>Choose the background colour of your paragraph : </label><input name="pbgcolor" value="#ffffff" type="color"><br>
+<label>Choose the font colour of your paragraph: </label><input name="pcolor" type="color"><br>
+<label>Choose the font type of your paragraph (default: serif): </label><input name="pface" ><br>
+<label>Choose the backup font of your paragraph (default: serif): </label><input name="pfamily" value="serif" ><br>
+<label>Choose the alignment of your paragraph : </label><input name="pfloat"><br>
+<label>Choose the font size of your paragraph.: </label><input name="psize" ><br>
+<label>Choose the padding of your paragraph.(Given in order top, right, bottom and left.): </label><input name="ppaddingTop" value="0"><input name="ppaddingRight" value="0"><input name="ppaddingBottom" value="0"><input name="ppaddingLeft" value="0"><br>
+<label>Choose the margins of your paragraph. (Given in order top, right, bottom and left.): </label><input name="pmargintop" value="0"><input name="pmarginright" value="0"><input name="pmarginbottom" value="0"><input name="pmarginleft" value="0"><br>
+</form>
+</fieldset>
+<button onclick="check()">Go!</button>
+<p id="correction"></p>
+<div class="script">
+<p id="script"></p>
+</div>
+<script src="csswriter.js">
+</script>
+</body>
+</html>
