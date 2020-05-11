@@ -1,0 +1,42 @@
+<html>
+<body>
+<label>Width of your scrollbar (pixels)</label><br>
+<input id="barwidth" type="number" /><br>
+<label>Background color of your scrollbar</label><br>
+<input id="trackBg" type="color" /><br>
+<label>Color of your scrollbar</label><br>
+<input id="thumbColor" type="color" /><br>
+<label>Color of your scrollbar on hover</label><br>
+<input id="thumbColorHover" type="color" /><br>
+<input id="curve" type="checkbox" /><br>
+<label>Elliptical scrollbar</label><br>
+<button onclick="check()">Go!</button>
+<p id="script"></p>
+<script type="text/javascript" >
+function check() {
+	if (document.getElementById("barwidth").value == "") {
+		alert('Please fill out all fields');
+} else {
+generate();	
+}
+}
+function generate() {
+var barWidth = document.getElementById("barwidth").value;
+var trackBg = document.getElementById("trackBg").value;
+var thumbColor = document.getElementById("thumbColor").value;
+var thumbColorHover = document.getElementById("thumbColorHover").value;
+var srcCode; 
+srcCode += "::-webkit-scrollbar {" + "width:" + barWidth + "px;}<br>";
+	if (document.getElementById('curve').checked == true) {
+		srcCode += "::-webkit-scrollbar-track {" + "background: " + trackBg + "; border-radius: 7.5px;}<br>";
+		srcCode += "::-webkit-scrollbar-thumb {" + "background: " + thumbColor + "; border-radius: 7.5px;}<br>";
+} else {
+			srcCode += "::-webkit-scrollbar-track {" + "background: " + trackBg + ";}<br>";
+		srcCode += "::-webkit-scrollbar-thumb {" + "background: " + thumbColor + ";}<br>";
+}
+srcCode += "::-webkit-scrollbar-thumb:hover {" + "background: " + thumbColorHover + ";}"
+document.getElementById("script").innerHTML = "<code>" + srcCode + "</code>";
+}
+</script>
+</body>
+</html>
