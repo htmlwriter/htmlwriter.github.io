@@ -26,7 +26,7 @@ var trackBg = document.getElementById("trackBg").value;
 var thumbColor = document.getElementById("thumbColor").value;
 var thumbColorHover = document.getElementById("thumbColorHover").value;
 var srcCode; 
-srcCode += "::-webkit-scrollbar {" + "width:" + barWidth + "px;}<br>";
+srcCode = "::-webkit-scrollbar {" + "width:" + barWidth + "px;}<br>";
 	if (document.getElementById('curve').checked == true) {
 		srcCode += "::-webkit-scrollbar-track {" + "background: " + trackBg + "; border-radius: 7.5px;}<br>";
 		srcCode += "::-webkit-scrollbar-thumb {" + "background: " + thumbColor + "; border-radius: 7.5px;}<br>";
