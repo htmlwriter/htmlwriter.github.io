@@ -1,5 +1,15 @@
 <html>
+<head>
+<title>Scrollbar maker</title>
+<link rel = "stylesheet" href = "https://htmlwriter.github.io/format.css">
+</head>
 <body>
+<ul class = "nav">
+  <li class = "option"><img src = "https://htmlwriter.github.io/images/HTML Writer Logo.svg" height = "65" width = "65">
+  <li class = "option"><a href = "https://htmlwriter.github.io/">Home</a>
+  <li class = "option"><a href = "writingpage">Create Source Code</a>
+  <li class = "option"><a href = "Credits">Credits</a>
+</ul><br><br><br><br>
 <label>Width of your scrollbar (pixels)</label><br>
 <input id="barwidth" type="number" /><br>
 <label>Background color of your scrollbar</label><br>
@@ -11,6 +21,9 @@
 <input id="curve" type="checkbox" /><br>
 <label>Elliptical scrollbar</label><br>
 <button onclick="check()">Go!</button>
+<div class="fixed">
+&copy;htmlwriter 2020
+</div>
 <p id="script"></p>
 <script type="text/javascript" >
 function check() {
